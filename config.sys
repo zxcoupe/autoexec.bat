@@ -1,0 +1,14 @@
+[menu]
+menuitem=WIN, Windows
+menudefault=WIN,30
+menuitem=QNXDMA, QNX Realtime Platform
+menuitem=QNX, QNX Realtime Platform (DMA Disabled)
+menucolor=7,0
+[QNX]
+DEVICE=C:\PROGRA~1\QNX\boot\bin\loadqnx.sys C:\PROGRA~1\QNX\boot\fs\qnxbase.ifs 
+[QNXDMA]
+DEVICE=C:\PROGRA~1\QNX\boot\bin\loadqnx.sys C:\PROGRA~1\QNX\boot\fs\qnxbas~1.ifs 
+[WIN]
+device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+Country=007,866,C:\WINDOWS\COMMAND\country.sys
+[COMMON]
