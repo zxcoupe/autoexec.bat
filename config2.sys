@@ -1,0 +1,145 @@
+[menu]
+menuitem=AW, Start terminal with TERM500 (Autonomed work)
+menuitem=WINDOWSTV, Start OS Windows with TV drivers.
+menuitem=TVEMS, Start terminal with a TV drivers + EMM386.EXE driver.
+menuitem=WINDOWS, Start OS Windows.
+menuitem=MSDOS, Start computer in protected mode with OS MS-DOS.
+menuitem=EMM386, Start computer in real mode with OS MS-DOS.
+menuitem=NONCD, Start (in Pr.m.) MS-DOS without CD-ROM driver. (For hacked games)
+menuitem=NONCDEMS, Start (in Real.m.) MS-DOS without CD-ROM driver. (For hacked games)
+menuitem=SOUND, Start with sound drivers.
+
+menuitem=WIN, Windows
+menuitem=QNXDMA, QNX Realtime Platform
+menuitem=QNX, QNX Realtime Platform (DMA Disabled)
+
+menudefault=WINDOWS,10
+menucolor=2,0
+
+[AW]
+device=c:\windows\himem.sys /testmem:off
+files=10
+buffers=10
+dos=high,umb
+stacks=9,256
+lastdrive=z
+devicehigh=c:\windows\command\display.sys con=(ega,,1)
+country=007,866,c:\windows\command\country.sys
+
+[TV]
+[TVEMS]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICE=C:\WINDOWS\EMM386.EXE RAM H=255
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+DEVICEHIGH C:\CDROM\oakcdrom.sys /D:MSCD001
+country=007,866,c:\windows\command\country.sys
+
+[WINDOWS]
+rem device=c:\windows\himem.sys /testmem:off
+files=30
+buffers=10
+dos=high,umb
+rem stacks=9,256
+rem lastdrive=z
+devicehigh=c:\windows\command\display.sys con=(ega,,1)
+country=007,866,c:\windows\command\country.sys
+
+[WINDOWSTV]
+device=c:\windows\himem.sys /testmem:off
+files=10
+buffers=10
+dos=high,umb
+stacks=9,256
+lastdrive=z
+devicehigh=c:\windows\command\display.sys con=(ega,,1)
+country=007,866,c:\windows\command\country.sys
+
+
+[MSDOS]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+DEVICEHIGH C:\CDROM\oakcdrom.sys /D:MSCD001
+country=007,866,c:\windows\command\country.sys
+
+[EMM386]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICE=C:\WINDOWS\EMM386.EXE RAM H=255
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+DEVICEHIGH C:\CDROM\oakcdrom.sys /D:MSCD001
+country=007,866,c:\windows\command\country.sys
+
+[NOTHING]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DOS=high,UMB
+DOS=HIGH
+
+[80386]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICE=C:\WINDOWS\EMM386.EXE RAM 4096
+BUFFERS=15,0
+FILES=20
+DOS=high,UMB
+LASTDRIVE=E
+STACKS=9,256
+DOS=HIGH
+country=007,866,c:\windows\command\country.sys
+
+[NONCD]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICE=C:\WINDOWS\setver.exe
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+country=007,866,c:\windows\command\country.sys
+
+[NONCDEMS]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICEhigh=C:\WINDOWS\EMM386.EXE RAM H=255
+DEVICEhigh=C:\WINDOWS\setver.exe
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+country=007,866,c:\windows\command\country.sys
+
+[SOUND]
+DEVICE=C:\WINDOWS\HIMEM.SYS
+DEVICE=C:\WINDOWS\EMM386.EXE RAM H=255
+DEVICEHIGH=C:\UTIL\ES1868.COM /A:168 /I:C
+BUFFERS=15,0
+FILES=40
+DOS=high,UMB
+LASTDRIVE=F
+STACKS=9,256
+DOS=HIGH
+DEVICEHIGH C:\CDROM\oakcdrom.sys /D:MSCD001
+country=007,866,c:\windows\command\country.sys
+
+
+[QNX]
+DEVICE=C:\PROGRA~1\QNX\boot\bin\loadqnx.sys C:\PROGRA~1\QNX\boot\fs\qnxbase.ifs
+[QNXDMA]
+DEVICE=C:\PROGRA~1\QNX\boot\bin\loadqnx.sys C:\PROGRA~1\QNX\boot\fs\qnxbas~1.ifs
+[WIN]
+device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+Country=007,866,C:\WINDOWS\COMMAND\country.sys
